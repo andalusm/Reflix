@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -36,3 +37,78 @@
     transform: rotate(360deg);
   }
 }
+body{
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.movies{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap:30px ;
+  padding:50px;
+}
+.movie{
+  position: relative;
+}
+.movie img{
+  width: 100%;
+  height: 400px;
+ 
+}
+
+
+.users{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-column-gap:10px ;
+  padding:50px;
+
+}
+
+.user{
+  width: 350px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  height: 150px;
+  border-radius: 15px;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* align navbar to the left */
+  color: #fff;
+  padding: 0 16px;
+}
+
+.navbar a {
+  margin-top: 10px;
+  margin-left: 10px;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 16px;
+  font-size: 36px;
+  color:white;
+  font-weight: bold;
+
+}
+.rentButton{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.catalogBar{
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.movieDetail{
+  padding: 1% 20%;
+}
+.movieImg{
+  width: 300px;
+}
+
+
