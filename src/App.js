@@ -7,6 +7,14 @@ import Catalog from './components/Catalog';
 import MovieDetails from './components/MovieDetails';
 import Navbar from './components/Navbar';
 import { CATALOGS, USERS } from './Constants';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 
 
@@ -39,20 +47,22 @@ function App() {
     setUsers(newUsers)
     setCatalogs(newCatalog)
   }
-  const [currentUserID, setCurrentUserID] = useState(users[0])
+  const [currentUserID, setCurrentUserID] = useState(0)
   const changeUser = function (userID) {
     setCurrentUserID(userID)
   }
+
   return (
     <Router>
-      <div className="App">
+      <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
         <Navbar></Navbar>
         <Routes>
           <Route path="/" element={<Landing changeUser={changeUser} users={users} />} />
           <Route path="/:category/" element={<Catalog user={users.find(u => currentUserID === u.id)} catalogs={catalogs} rentMovie={rentMovie} />} />
           <Route path="/movies/:movieID" element={<MovieDetails />} />
         </Routes>
-      </div>
+        </ThemeProvider>
     </Router>
   );
 }

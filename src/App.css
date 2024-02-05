@@ -15,19 +15,15 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -39,8 +35,7 @@
 }
 body{
   font-family: Arial, sans-serif;
-  background-color: black;
-  color: white;
+
 }
 
 .movies{
@@ -75,31 +70,14 @@ body{
   height: 150px;
   border-radius: 15px;
 }
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* align navbar to the left */
-  color: #fff;
-  padding: 0 16px;
-}
 
-.navbar a {
-  margin-top: 10px;
-  margin-left: 10px;
-  color: #fff;
-  text-decoration: none;
-  margin-right: 16px;
-  font-size: 36px;
-  color:white;
-  font-weight: bold;
-
-}
 .rentButton{
   position: absolute;
   right: 0;
   top: 0;
 }
 .catalogBar{
+  margin: 15px 0;
   padding: 0 16px;
   display: flex;
   justify-content: space-between;
@@ -110,5 +88,7 @@ body{
 .movieImg{
   width: 300px;
 }
+
+
 
 
